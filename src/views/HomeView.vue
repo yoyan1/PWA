@@ -24,7 +24,7 @@ async function add(){
     <div class="header">
 
     </div>
-    <form @submit.prevent="add" v-if="isSuccess">
+    <form @submit.prevent="add" v-if="!isSuccess">
       <h3>Register student</h3><br>
       <div class="mb-3">
         <input type="text" v-model="student.firstname" class="form-control" id="exampleFormControlInput1" placeholder="lastname">
@@ -40,7 +40,7 @@ async function add(){
       </div> -->
       <button>Submit</button>
     </form>
-    <div class="success" v-if="!isSuccess">
+    <div class="success" v-if="isSuccess">
       <h1>Thank! you for Registering</h1>
     </div>
   </main>
